@@ -1,0 +1,30 @@
+type User{
+  id:Int!
+  email:String!
+  firstName: String!
+  lastName: String!
+  age:Int
+  password:String
+  verifiedEmail: Boolean!
+  phoneNumber:String
+  verifiedPhoneNumber:Boolean!
+  profilePhoto:String
+  createAt:String!
+  updateAt:String!
+  fullName:String
+  isDriving:Boolean!
+  isRiding:Boolean!
+  isTaken:Boolean!
+  chat:Chat
+  messages:[Message]
+  verifications:[Verification]
+  ridesAsPassenger:[Ride]
+  ridesAsDriver:[Ride]
+  lastLng:Float
+  lastLat:Float
+  lastOrienation:Float
+}
+
+type Query{
+  user:User
+}

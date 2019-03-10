@@ -1,0 +1,47 @@
+{
+  "name": "nuber-server",
+  "version": "1.0.0",
+  "description": "uber clone with React JS",
+  "main": "index.js",
+  "scripts": {
+    "predev":"npm run types",
+    "dev": "cd src && nodemon --exec ts-node index.ts -e ts,graphql",
+    "pretypes": "gql-merge --out-file ./src/schema.graphql ./src/api/**/*.graphql",
+    "types": "graphql-to-typescript ./src/schema.graphql ./src/types/graphql.d.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devGeonil/nuber-server.git"
+  },
+  "author": "devGeonil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devGeonil/nuber-server/issues"
+  },
+  "homepage": "https://github.com/devGeonil/nuber-server#readme",
+  "dependencies": {
+    "@types/bcrypt": "^3.0.0",
+    "@types/cors": "^2.8.4",
+    "@types/helmet": "0.0.42",
+    "@types/morgan": "^1.7.35",
+    "@types/node": "^11.10.4",
+    "babel-runtime": "^6.26.0",
+    "bcrypt": "^3.0.4",
+    "class-validator": "^0.9.1",
+    "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
+    "gql-merge": "0.0.6",
+    "graphql-to-typescript": "^0.1.2",
+    "graphql-tools": "^4.0.4",
+    "graphql-yoga": "^1.17.4",
+    "helmet": "^3.15.1",
+    "merge-graphql-schemas": "^1.5.8",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.10",
+    "pg": "^7.8.2",
+    "ts-node": "^8.0.2",
+    "tslint-config-prettier": "^1.18.0",
+    "typeorm": "^0.2.14",
+    "typescript": "^3.3.3333"
+  }
+}

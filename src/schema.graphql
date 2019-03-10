@@ -1,0 +1,82 @@
+type Chat {
+  id: Int!
+  messages: [Message]!
+  participants: [User]!
+  createAt: String!
+  updateAt: String
+}
+
+type Message {
+  id: Int!
+  text: String!
+  chat: Chat!
+  user: User!
+  createAt: String!
+  updateAt: String!
+}
+
+type Place {
+  id: Int!
+  name: String!
+  lat: Float!
+  lng: Float!
+  address: String!
+  isFav: Boolean!
+  createAt: String!
+  updateAt: String!
+}
+
+type Ride {
+  id: Int!
+  status: String!
+  pickUpAddress: String!
+  pickUpLat: Float!
+  pickUpLng: Float!
+  dropOffAddress: String!
+  dropOffLat: Float!
+  dropOffLng: Float!
+  price: Float!
+  distance: String!
+  duration: String!
+  createAt: String!
+  updateAt: String!
+}
+
+type User {
+  id: Int!
+  email: String!
+  firstName: String!
+  lastName: String!
+  age: Int
+  password: String
+  verifiedEmail: Boolean!
+  phoneNumber: String
+  verifiedPhoneNumber: Boolean!
+  profilePhoto: String
+  createAt: String!
+  updateAt: String!
+  fullName: String
+  isDriving: Boolean!
+  isRiding: Boolean!
+  isTaken: Boolean!
+  chat: Chat
+  messages: [Message]
+  lastLng: Float
+  lastLat: Float
+  lastOrienation: Float
+  chat: Chat
+}
+
+type Query {
+  user: User
+}
+
+type Verification {
+  id: Int!
+  target: String!
+  payload: String!
+  key: String!
+  used: Boolean!
+  createAt: String!
+  updateAt: String!
+}
